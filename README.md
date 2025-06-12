@@ -3,6 +3,11 @@ _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 
 En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
 
+
+
+
+
+
 ### 📄 Entregas
 **Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
 
