@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobWave - Publicar Empleos</title>
+    <link rel="stylesheet" href="portal.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <h1><i class="fas fa-briefcase"></i> JobWave</h1>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn-secondary" onclick="showLoginModal()">
+            Iniciar Sesión
+          </button>
+          <button class="btn-primary" onclick="showRegisterModal()">
+            Registrarse
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Publicá tu oferta laboral</h1>
+        <p>Encontrá al candidato perfecto para tu empresa</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <i class="fas fa-users"></i>
+            <span class="stat-number">+10,000</span>
+            <span class="stat-label">Candidatos activos</span>
+          </div>
+          <div class="stat">
+            <i class="fas fa-building"></i>
+            <span class="stat-number">+500</span>
+            <span class="stat-label">Empresas confían en nosotros</span>
+          </div>
+          <div class="stat">
+            <i class="fas fa-handshake"></i>
+            <span class="stat-number">+2,500</span>
+            <span class="stat-label">Contrataciones exitosas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Form Section -->
+    <section class="form-section">
+      <div class="container">
+        <div class="form-container">
+          <div class="form-header">
+            <h2><i class="fas fa-plus-circle"></i> Publicar Nueva Oferta</h2>
+            <p>Completá los datos de tu oferta laboral</p>
+          </div>
+
+          <form id="jobForm" class="job-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="jobTitle"
+                  ><i class="fas fa-tag"></i> Título del puesto *</label
+                >
+                <input
+                  type="text"
+                  id="jobTitle"
+                  placeholder="ej: Desarrollador Frontend Senior"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="company"
+                  ><i class="fas fa-building"></i> Empresa *</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Nombre de tu empresa"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location"
+                  ><i class="fas fa-map-marker-alt"></i> Ubicación *</label
+                >
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Ciudad, Provincia"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="jobType"
+                  ><i class="fas fa-clock"></i> Tipo de trabajo *</label
+                >
+                <select id="jobType" required>
+                  <option value="">Seleccionar tipo...</option>
+                  <option value="tiempo-completo">Tiempo Completo</option>
+                  <option value="medio-tiempo">Medio Tiempo</option>
+                  <option value="freelance">Freelance</option>
+                  <option value="remoto">Remoto</option>
+                  <option value="hibrido">Híbrido</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="salary"
+                  ><i class="fas fa-dollar-sign"></i> Rango salarial</label
+                >
+                <input
+                  type="text"
+                  id="salary"
+                  placeholder="ej: $50,000 - $70,000 o A convenir"
+                />
+              </div>
+              <div class="form-group">
+                <label for="experience"
+                  ><i class="fas fa-graduation-cap"></i> Experiencia
+                  requerida</label
+                >
+                <select id="experience">
+                  <option value="">Seleccionar...</option>
+                  <option value="sin-experiencia">Sin experiencia</option>
+                  <option value="1-2-años">1-2 años</option>
+                  <option value="3-5-años">3-5 años</option>
+                  <option value="5-años">+5 años</option>
+                  <option value="senior">Senior</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description"
+                ><i class="fas fa-align-left"></i> Descripción del puesto
+                *</label
+              >
+              <textarea
+                id="description"
+                rows="4"
+                placeholder="Describí las responsabilidades principales, el ambiente de trabajo, beneficios..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="requirements"
+                ><i class="fas fa-list-check"></i> Requisitos y
+                habilidades</label
+              >
+              <textarea
+                id="requirements"
+                rows="3"
+                placeholder="Conocimientos técnicos, habilidades blandas, certificaciones..."
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail"
+                  ><i class="fas fa-envelope"></i> Email de contacto *</label
+                >
+                <input
+                  type="email"
+                  id="contactEmail"
+                  placeholder="rrhh@empresa.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone"
+                  ><i class="fas fa-phone"></i> Teléfono (opcional)</label
+                >
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  placeholder="+54 11 1234-5678"
+                />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary" onclick="resetForm()">
+                <i class="fas fa-undo"></i> Limpiar
+              </button>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i> Publicar Oferta
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Sidebar con información -->
+        <div class="info-sidebar">
+          <div class="info-card">
+            <h3><i class="fas fa-lightbulb"></i> Tips para una buena oferta</h3>
+            <ul>
+              <li>Sé específico con el título del puesto</li>
+              <li>Incluí beneficios y ambiente laboral</li>
+              <li>Mencioná oportunidades de crecimiento</li>
+              <li>Especificá si es remoto o presencial</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-chart-line"></i> Estadísticas</h3>
+            <div class="stat-item">
+              <span>Promedio de postulaciones por oferta</span>
+              <strong>25-40 candidatos</strong>
+            </div>
+            <div class="stat-item">
+              <span>Tiempo promedio de contratación</span>
+              <strong>2-3 semanas</strong>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-shield-alt"></i> Tu oferta será</h3>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i> Revisada por nuestro equipo</li>
+              <li><i class="fas fa-check"></i> Publicada en 24hs</li>
+              <li><i class="fas fa-check"></i> Visible por 30 días</li>
+              <li><i class="fas fa-check"></i> Promocionada en redes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Published Jobs Section -->
+    <section class="published-jobs">
+      <div class="container">
+        <h2><i class="fas fa-list"></i> Ofertas Publicadas Recientemente</h2>
+        <div class="jobs-preview" id="jobsPreview">
+          <!-- Las ofertas se cargarán aquí -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeRegisterModal()">&times;</span>
+        <h2><i class="fas fa-user-plus"></i> Registrarse</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="companyName"
+              ><i class="fas fa-building"></i> Nombre de la empresa</label
+            >
+            <input type="text" id="companyName" required />
+          </div>
+          <div class="form-group">
+            <label for="fullName"
+              ><i class="fas fa-user"></i> Nombre del responsable</label
+            >
+            <input type="text" id="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail"
+              ><i class="fas fa-envelope"></i> Email corporativo</label
+            >
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword"
+              ><i class="fas fa-lock"></i> Contraseña</label
+            >
+            <input type="password" id="regPassword" required />
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            <i class="fas fa-user-plus"></i> Crear Cuenta
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content success-modal">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>¡Oferta Publicada Exitosamente!</h2>
+        <p>
+          Tu oferta laboral ha sido enviada para revisión y será publicada en
+          las próximas 24 horas.
+        </p>
+        <button class="btn-primary" onclick="closeSuccessModal()">
+          Entendido
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><i class="fas fa-briefcase"></i> JobWave</h3>
+            <p>
+              La plataforma líder para publicar ofertas laborales en Argentina
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Para Empresas</h4>
+            <ul>
+              <li><a href="#">Publicar Oferta</a></li>
+              <li><a href="#">Buscar Candidatos</a></li>
+              <li><a href="#">Planes Premium</a></li>
+              <li><a href="#">Estadísticas</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Soporte</h4>
+            <ul>
+              <li><a href="#">Centro de Ayuda</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-envelope"></i> empresas@jobwave.com</p>
+            <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+            <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 JobWave. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
