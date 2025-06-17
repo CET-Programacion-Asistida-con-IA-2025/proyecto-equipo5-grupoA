@@ -4,7 +4,7 @@ _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 En este repositorio, se presenta el sitio web realizado durante el curso de programación frontend de CET.
 
 
-
+JOBWAVE
 
 
 💼 Definición de la problemática
@@ -24,6 +24,7 @@ Acompañar en la inserción laboral.
 🖼️ Moodboard
 
 Incluye una estética accesible, práctica y moderna, con una identidad visual basada en tonos suaves, tipografías limpias y una imagen fresca. El perfil ideal de usuario fue definido como una persona distendida, comprometida, con buena energía y empatía por los demás.
+
 
 🧩 Archivos del proyecto
 
