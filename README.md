@@ -7,32 +7,35 @@ En este repositorio, se presenta el sitio web realizado durante el curso de prog
 
 
 
+💼 Definición de la problemática
 
-### 📄 Entregas
-**Entrega #1**: planificación de la solución y primeros resultados que obtengamos con la IA:
-
-📝 Edición del Archivo README incluyendo:
-- Definición de la problemática que eligieron abordar
-- Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
-- Explicación de la solución tecnológica que están desarrollando
-> [!TIP]
-> Aprovechen los [formatos del README](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para escribir diferentes secciones
-
-🎨 Moodboard
-
-🧩 Archivos generados con asistencia de IA: ```index.html```, ```style.css```, ```script.js```
+Actualmente existen múltiples plataformas para la búsqueda de empleo, sin embargo, muchas de ellas no resultan accesibles para todas las personas, especialmente aquellas que recién están comenzando en el mundo laboral o que no cuentan con formación digital. Además, la mayoría de estas plataformas no ofrecen apoyo concreto para que los postulantes se capaciten y mejoren sus oportunidades.
 
 
-**Entrega #2 (Final)**: se esperan modificaciones en el código respecto a la entrega anterior, que pueden incluir nuevos archivos o extensión de los existentes (debe haber al menos un archivo de cada lenguaje visto - HTML, CSS y Javascript)
+🌍 Relación con los ODS
 
-💡 Es una buena idea llevar un registro de lo que cambiamos. Por ejemplo
+Este proyecto se relaciona directamente con el ODS 8: Trabajo decente y crecimiento económico, ya que busca:
+
+Promover oportunidades de empleo inclusivo para personas jivenes sin experiencia.
+
+Acompañar en la inserción laboral.
+
+
+🖼️ Moodboard
+
+Incluye una estética accesible, práctica y moderna, con una identidad visual basada en tonos suaves, tipografías limpias y una imagen fresca. El perfil ideal de usuario fue definido como una persona distendida, comprometida, con buena energía y empatía por los demás.
+
+🧩 Archivos del proyecto
+
+Este proyecto fue desarrollado utilizando las siguientes tecnologías:
+
+index.html: Estructura principal del sitio.
+
+style.css: Estilo visual basado en el moodboard (colores, tipografías, diseño responsivo).
+
+script.js: Comportamientos interactivos (formularios, buscador, etc.).
 ```
-- Agregamos Bootstrap para el carrousel de imágenes...
-- Modificamos el texto de la sección de bienvenida...
-- Transformamos los textos sobre redes sociales en links...
-```
 
-Ahora si, ¡A programar! 🚀
 
 
 [^1]: Los Objetivos de Desarrollo Sostenible u Objetivos Globales, también conocidos como Agenda 2030, son 17 objetivos globales interconectados diseñados para ser un «plan para lograr un futuro mejor y más sostenible para todos». Más información en https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/
