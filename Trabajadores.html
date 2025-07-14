@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Búsqueda de Empleo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="registration-form">
+        <div class="form-header">
+          <h1>Registro de Usuario</h1>
+          <p>Encuentra tu próximo empleo</p>
+        </div>
+
+        <form id="registrationForm" novalidate>
+          <div class="form-section">
+            <h2>Información Personal</h2>
+
+            <div class="form-group">
+              <label for="firstName">Nombre *</label>
+              <input type="text" id="firstName" name="firstName" required />
+              <span class="error-message" id="firstNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Apellido *</label>
+              <input type="text" id="lastName" name="lastName" required />
+              <span class="error-message" id="lastNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" />
+              <span class="error-message" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="birthDate">Fecha de Nacimiento</label>
+              <input type="date" id="birthDate" name="birthDate" />
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Información de Acceso</h2>
+
+            <div class="form-group">
+              <label for="password">Contraseña *</label>
+              <input type="password" id="password" name="password" required />
+              <span class="error-message" id="passwordError"></span>
+              <div class="password-requirements">
+                <small
+                  >Mínimo 8 caracteres, incluir mayúsculas, minúsculas y
+                  números</small
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirmar Contraseña *</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+              />
+              <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Información Profesional</h2>
+
+            <div class="form-group">
+              <label for="profession">Profesión/Ocupación *</label>
+              <input type="text" id="profession" name="profession" required />
+              <span class="error-message" id="professionError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="experience">Años de Experiencia</label>
+              <select id="experience" name="experience">
+                <option value="">Selecciona...</option>
+                <option value="0-1">0-1 años</option>
+                <option value="2-3">2-3 años</option>
+                <option value="4-5">4-5 años</option>
+                <option value="6-10">6-10 años</option>
+                <option value="10+">Más de 10 años</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="education">Nivel Educativo</label>
+              <select id="education" name="education">
+                <option value="">Selecciona...</option>
+                <option value="secundario">Secundario</option>
+                <option value="terciario">Terciario</option>
+                <option value="universitario">Universitario</option>
+                <option value="posgrado">Posgrado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="skills">Habilidades (separadas por comas)</label>
+              <textarea
+                id="skills"
+                name="skills"
+                rows="3"
+                placeholder="Ej: Excel, Word, Inglés, Atención al cliente..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Ubicación</h2>
+
+            <div class="form-group">
+              <label for="city">Ciudad *</label>
+              <input type="text" id="city" name="city" required />
+              <span class="error-message" id="cityError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="province">Provincia *</label>
+              <select id="province" name="province" required>
+                <option value="">Selecciona...</option>
+                <option value="buenos-aires">Buenos Aires</option>
+                <option value="catamarca">Catamarca</option>
+                <option value="chaco">Chaco</option>
+                <option value="chubut">Chubut</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="corrientes">Corrientes</option>
+                <option value="entre-rios">Entre Ríos</option>
+                <option value="formosa">Formosa</option>
+                <option value="jujuy">Jujuy</option>
+                <option value="la-pampa">La Pampa</option>
+                <option value="la-rioja">La Rioja</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="misiones">Misiones</option>
+                <option value="neuquen">Neuquén</option>
+                <option value="rio-negro">Río Negro</option>
+                <option value="salta">Salta</option>
+                <option value="san-juan">San Juan</option>
+                <option value="san-luis">San Luis</option>
+                <option value="santa-cruz">Santa Cruz</option>
+                <option value="santa-fe">Santa Fe</option>
+                <option value="santiago-del-estero">Santiago del Estero</option>
+                <option value="tierra-del-fuego">Tierra del Fuego</option>
+                <option value="tucuman">Tucumán</option>
+                <option value="caba">CABA</option>
+              </select>
+              <span class="error-message" id="provinceError"></span>
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="terms" name="terms" required />
+              <span class="checkmark"></span>
+              Acepto los
+              <a href="#" target="_blank">términos y condiciones</a> *
+            </label>
+            <span class="error-message" id="termsError"></span>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <span class="checkmark"></span>
+              Deseo recibir notificaciones sobre nuevas ofertas de empleo
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Registrarse</button>
+            <button type="reset" class="btn-secondary">
+              Limpiar Formulario
+            </button>
+          </div>
+        </form>
+
+        <div class="form-footer">
+          <p>¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¡Registro Exitoso!</h2>
+        <p>
+          Tu cuenta ha sido creada correctamente. Pronto recibirás un email de
+          confirmación.
+        </p>
+        <button class="btn-primary" onclick="closeModal()">Continuar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

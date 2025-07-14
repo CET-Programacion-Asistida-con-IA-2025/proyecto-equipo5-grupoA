@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobWave</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="jobwave_css.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JobWave</h1>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="cv_creator_html.html" class="btn-cv">Crear Currículum</a>
+        <a href="#innovacion">Innovación</a>
+        <a href="#zonas">Ofertas en tu zona</a>
+        <a href="Portal.html" class="btn-publicar">Publicar Empleo</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+      <h2>Descubrí el trabajo ideal para vos</h2>
+      <p>Explorá oportunidades, armá tu CV y conectá con tu futuro</p>
+      <button onclick="scrollToSearch()">Buscar ofertas</button>
+    </section>
+
+    <div class="search-bar" id="busqueda">
+      <input type="text" placeholder="Buscar" />
+      <input type="text" placeholder="Ubicación" />
+      <button>Buscar</button>
+    </div>
+
+    <section class="features" id="cv">
+      <div class="feature-box">
+        <a
+          href=""
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <h4>🌐 Crear currículum</h4>
+        </a>
+      </div>
+      <div class="feature-box" id="zonas">
+        <h4>💼 Ofertas en zona</h4>
+      </div>
+      <div class="feature-box" id="innovacion">
+        <h4>⚙️ Innovación</h4>
+      </div>
+      <div class="feature-box">
+        <h4>👥 Quiénes somos</h4>
+      </div>
+    </section>
+
+    <section class="jobs-section">
+      <h3>Ofertas laborales</h3>
+      <div class="job-post">
+        <h4>Desarrollador Frontend</h4>
+        <p>Empresa: TechGlobal | Ubicación: CABA</p>
+      </div>
+      <div class="job-post">
+        <h4>Asistente Administrativo</h4>
+        <p>Empresa: FinanPlus | Ubicación: Zona Oeste</p>
+      </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonios-section">
+      <h3>Lo que dicen nuestros usuarios</h3>
+      <div class="testimonios-grid">
+        <div class="testimonio-card">
+          <p class="testimonio-texto">
+            Conseguí mi primer trabajo como desarrolladora gracias a JobWave.
+            Los cursos de capacitación me ayudaron un montón y el simulador de
+            entrevistas me dio la confianza que necesitaba.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">M</div>
+            <div class="testimonio-info">
+              <h5>María González</h5>
+              <p>Desarrolladora Frontend - TechStart</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <p class="testimonio-texto">
+            Después de estar 6 meses sin trabajo, JobWave me conectó con la
+            empresa perfecta. La plataforma es súper fácil de usar y las ofertas
+            están siempre actualizadas.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">C</div>
+            <div class="testimonio-info">
+              <h5>Carlos Ramírez</h5>
+              <p>Analista Administrativo - FinanPlus</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <p class="testimonio-texto">
+            Como empleador, encontré candidatos increíbles a través de JobWave.
+            Me encanta que la plataforma se enfoque en capacitar a las personas,
+            eso marca la diferencia.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">L</div>
+            <div class="testimonio-info">
+              <h5>Laura Fernández</h5>
+              <p>HR Manager - CreativaStudio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Simulador de Entrevistas -->
+    <section class="simulador-section">
+      <h3>Simulador de Entrevistas</h3>
+      <p class="simulador-subtitle">
+        Practicá con preguntas reales y mejorá tu confianza
+      </p>
+
+      <div class="simulador-container">
+        <div class="progreso-bar">
+          <div class="progreso-fill" id="progreso"></div>
+        </div>
+
+        <!-- Pantalla de Inicio -->
+        <div class="simulador-intro" id="intro">
+          <h4>¿Listo para practicar?</h4>
+          <p>
+            Te vamos a hacer 5 preguntas típicas de entrevistas laborales.
+            Tomate tu tiempo para responder y al final te daremos consejos
+            personalizados.
+          </p>
+          <button class="simulador-btn" onclick="iniciarSimulador()">
+            Comenzar Simulación
+          </button>
+        </div>
+
+        <!-- Preguntas -->
+        <div class="pregunta-container" id="pregunta-1">
+          <div class="pregunta-numero">Pregunta 1 de 5</div>
+          <div class="pregunta-texto">
+            Contanos un poco sobre vos y tu experiencia profesional.
+          </div>
+          <textarea
+            class="respuesta-input"
+            placeholder="Escribí tu respuesta aquí..."
+            id="respuesta-1"
+          ></textarea>
+          <div class="simulador-controls">
+            <button class="simulador-btn secondary" onclick="volverIntro()">
+              Volver
+            </button>
+            <button class="simulador-btn" onclick="siguientePregunta(2)">
+              Siguiente
+            </button>
+          </div>
+        </div>
+
+        <div class="pregunta-container" id="pregunta-2">
+          <div class="pregunta-numero">Pregunta 2 de 5</div>
+          <div class="pregunta-texto">
+            ¿Por qué te interesa trabajar en nuestra empresa?
+          </div>
+          <textarea
+            class="respuesta-input"
+            placeholder="Escribí tu respuesta aquí..."
+            id="respuesta-2"
+          ></textarea>
+          <div class="simulador-controls">
+            <button
+              class="simulador-btn secondary"
+              onclick="anteriorPregunta(1)"
+            >
+              Anterior
+            </button>
+            <button class="simulador-btn" onclick="siguientePregunta(3)">
+              Siguiente
+            </button>
+          </div>
+        </div>
+
+        <div class="pregunta-container" id="pregunta-3">
+          <div class="pregunta-numero">Pregunta 3 de 5</div>
+          <div class="pregunta-texto">
+            ¿Cuáles considerás que son tus principales fortalezas?
+          </div>
+          <textarea
+            class="respuesta-input"
+            placeholder="Escribí tu respuesta aquí..."
+            id="respuesta-3"
+          ></textarea>
+          <div class="simulador-controls">
+            <button
+              class="simulador-btn secondary"
+              onclick="anteriorPregunta(2)"
+            >
+              Anterior
+            </button>
+            <button class="simulador-btn" onclick="siguientePregunta(4)">
+              Siguiente
+            </button>
+          </div>
+        </div>
+
+        <div class="pregunta-container" id="pregunta-4">
+          <div class="pregunta-numero">Pregunta 4 de 5</div>
+          <div class="pregunta-texto">
+            Describí una situación difícil que hayas enfrentado y cómo la
+            resolviste.
+          </div>
+          <textarea
+            class="respuesta-input"
+            placeholder="Escribí tu respuesta aquí..."
+            id="respuesta-4"
+          ></textarea>
+          <div class="simulador-controls">
+            <button
+              class="simulador-btn secondary"
+              onclick="anteriorPregunta(3)"
+            >
+              Anterior
+            </button>
+            <button class="simulador-btn" onclick="siguientePregunta(5)">
+              Siguiente
+            </button>
+          </div>
+        </div>
+
+        <div class="pregunta-container" id="pregunta-5">
+          <div class="pregunta-numero">Pregunta 5 de 5</div>
+          <div class="pregunta-texto">
+            ¿Dónde te ves profesionalmente en 5 años?
+          </div>
+          <textarea
+            class="respuesta-input"
+            placeholder="Escribí tu respuesta aquí..."
+            id="respuesta-5"
+          ></textarea>
+          <div class="simulador-controls">
+            <button
+              class="simulador-btn secondary"
+              onclick="anteriorPregunta(4)"
+            >
+              Anterior
+            </button>
+            <button class="simulador-btn" onclick="finalizarSimulador()">
+              Finalizar
+            </button>
+          </div>
+        </div>
+
+        <!-- Consejos finales -->
+        <div class="consejos-container" id="consejos" style="display: none">
+          <h4>¡Excelente trabajo! 🎉</h4>
+          <p>
+            Completaste el simulador. Aquí tienes algunos consejos generales
+            para mejorar en tus entrevistas:
+          </p>
+          <ul class="consejos-lista">
+            <li>Sé específico con ejemplos concretos de tu experiencia</li>
+            <li>Investigá sobre la empresa antes de la entrevista</li>
+            <li>Preparate preguntas para hacerle al entrevistador</li>
+            <li>Practicá tu lenguaje corporal frente al espejo</li>
+            <li>Llegá 10 minutos antes de la hora pactada</li>
+          </ul>
+          <button class="simulador-btn" onclick="reiniciarSimulador()">
+            Practicar de nuevo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 JobWave.</p>
+    </footer>
+
+    <script src="jobwave_js.js"></script>
+  </body>
+</html>
